@@ -17,10 +17,10 @@ export default function CircularButton({
   total,
 }: CircularButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   const angle = (index * (360 / total) * Math.PI) / 180;
   const radius = 250; // Distance from center
-  
+
   const x = Math.cos(angle) * radius;
   const y = Math.sin(angle) * radius;
 
@@ -41,7 +41,7 @@ export default function CircularButton({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-32 py-3 text-center bg-transparent border-2 border-white text-white font-bold rounded-lg relative z-10 hover:border-red-500 transition-colors"
+          className="flex items-center justify-center w-16 h-16 bg-transparent border-2 border-white text-white font-bold rounded-full relative z-10 hover:border-red-500 transition-colors"
           animate={{
             boxShadow: isHovered
               ? "0 0 20px rgba(255, 0, 0, 0.5)"
@@ -50,7 +50,7 @@ export default function CircularButton({
         >
           {label}
         </motion.a>
-        
+
         {isHovered && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}

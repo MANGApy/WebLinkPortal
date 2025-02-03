@@ -30,7 +30,11 @@ export default function CelestialObjects() {
           ease: "easeInOut",
         }}
       >
-        <div className="w-full h-full rounded-full bg-white" />
+        <div className="relative w-full h-full">
+          {/* Crescent moon shape using two circles */}
+          <div className="absolute inset-0 rounded-full bg-white" />
+          <div className="absolute inset-0 rounded-full bg-black transform translate-x-2" />
+        </div>
       </motion.div>
 
       {/* Saturn-like planet */}
@@ -48,7 +52,7 @@ export default function CelestialObjects() {
       >
         {/* Planet body */}
         <div className="w-32 h-32 rounded-full bg-red-500/75" />
-        
+
         {/* Rings */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-12 border-4 border-red-500/50 rounded-full -rotate-15" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-52 h-14 border-4 border-red-500/30 rounded-full -rotate-15" />

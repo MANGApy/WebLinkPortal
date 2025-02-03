@@ -50,7 +50,7 @@ export default function Home() {
 
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <motion.h1
-          className="absolute text-6xl font-bold text-white transform translate-x-[25px]"
+          className="absolute text-6xl font-bold text-white transform translate-x-[15px]"
           animate={{
             scale: [1, 1.1, 1],
           }}
