@@ -47,10 +47,10 @@ export default function Home() {
     <div className="min-h-screen w-full bg-black overflow-hidden relative">
       <FloatingDots />
       <CelestialObjects />
-      
+
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <motion.h1
-          className="absolute text-6xl font-bold text-white"
+          className="absolute text-6xl font-bold text-white transform translate-x-[25px]"
           animate={{
             scale: [1, 1.1, 1],
           }}
@@ -62,8 +62,8 @@ export default function Home() {
         >
           INJU
         </motion.h1>
-        
-        <div className="relative w-[600px] h-[600px]">
+
+        <div className="relative w-[600px] h-[600px] transform -translate-x-[40px]">
           {buttons.map((button, index) => (
             <CircularButton
               key={button.id}
