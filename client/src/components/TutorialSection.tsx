@@ -31,7 +31,7 @@ export default function TutorialSection() {
             <CardContent className="pt-6">
               <div className="aspect-video rounded-lg overflow-hidden mb-4">
                 <video
-                  src="/attached_assets/BF1E439E-953D-44D3-A66B-4DB2A2813425.mov"
+                  src="https://media.discordapp.net/attachments/1321963106141995078/1331076720438149172/BF1E439E-953D-44D3-A66B-4DB2A2813425.mov?ex=67a2c24c&is=67a170cc&hm=fc906d0edc78d02c41d95ded6928bfbcf6fa6f1a01e03f2a24543cc3ad8491da&"
                   controls
                   className="w-full h-full object-cover"
                 >
