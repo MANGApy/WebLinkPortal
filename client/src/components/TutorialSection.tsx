@@ -60,13 +60,16 @@ export default function TutorialSection() {
           <Card className="border-white/20 bg-black/50">
             <CardContent className="pt-6">
               <div className="aspect-video rounded-lg overflow-hidden mb-4">
-                <video
-                  src="https://streamable.com/qy3kc4"
-                  controls
-                  className="w-full h-full object-cover"
+                <iframe
+                  src="https://streamable.com/e/qy3kc4"
+                  frameBorder="0"
+                  width="100%"
+                  height="100%"
+                  allowFullScreen
+                  style={{ aspectRatio: '16/9' }}
+                  title="How to Use Cookie (PC)"
                 >
-                  Your browser does not support the video tag.
-                </video>
+                </iframe>
               </div>
               <div className="text-white space-y-4">
                 <h3 className="text-xl font-bold">Understanding Roblox Cookies</h3>
