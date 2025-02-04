@@ -3,6 +3,7 @@ import FloatingDots from "@/components/FloatingDots";
 import CircularButton from "@/components/CircularButton";
 import CelestialObjects from "@/components/CelestialObjects";
 import TutorialSection from "@/components/TutorialSection";
+import SuggestionsSection from "@/components/SuggestionsSection"; // Added import
 import { TutorialProvider } from "@/components/SpaceTutorial";
 
 const buttons = [
@@ -80,8 +81,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Tutorial Section */}
           <TutorialSection />
+          <SuggestionsSection /> {/* Added SuggestionsSection */}
         </div>
       </div>
     </TutorialProvider>
