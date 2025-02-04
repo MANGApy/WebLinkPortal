@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import FloatingDots from "@/components/FloatingDots";
 import CircularButton from "@/components/CircularButton";
 import CelestialObjects from "@/components/CelestialObjects";
+import TutorialSection from "@/components/TutorialSection";
 import { TutorialProvider } from "@/components/SpaceTutorial";
 
 const buttons = [
@@ -50,32 +51,37 @@ export default function Home() {
         <FloatingDots />
         <CelestialObjects />
 
-        <div className="relative z-10 min-h-screen flex items-center justify-center">
-          <motion.h1
-            id="title"
-            className="absolute text-6xl font-bold text-white transform translate-x-[10px]"
-            animate={{
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            INJU
-          </motion.h1>
+        <div className="relative z-10 min-h-screen flex flex-col items-center">
+          <div className="flex-1 flex items-center justify-center relative">
+            <motion.h1
+              id="title"
+              className="absolute text-6xl font-bold text-white transform translate-x-[10px]"
+              animate={{
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              INJU
+            </motion.h1>
 
-          <div className="relative w-[600px] h-[600px] transform -translate-x-[40px]">
-            {buttons.map((button, index) => (
-              <CircularButton
-                key={button.id}
-                {...button}
-                index={index}
-                total={buttons.length}
-              />
-            ))}
+            <div className="relative w-[600px] h-[600px] transform -translate-x-[40px]">
+              {buttons.map((button, index) => (
+                <CircularButton
+                  key={button.id}
+                  {...button}
+                  index={index}
+                  total={buttons.length}
+                />
+              ))}
+            </div>
           </div>
+
+          {/* Tutorial Section */}
+          <TutorialSection />
         </div>
       </div>
     </TutorialProvider>
