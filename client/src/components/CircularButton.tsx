@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 interface CircularButtonProps {
+  id: number;
   label: string;
   info: string;
   link: string;
@@ -10,6 +11,7 @@ interface CircularButtonProps {
 }
 
 export default function CircularButton({
+  id,
   label,
   info,
   link,
@@ -38,6 +40,7 @@ export default function CircularButton({
         whileHover={{ scale: 1.2 }}
       >
         <motion.a
+          id={`button-${id}`}
           href={link}
           target="_blank"
           rel="noopener noreferrer"
