@@ -41,11 +41,22 @@ export default function CircularButton({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-16 h-16 bg-transparent border-2 border-white text-white font-bold rounded-full relative z-10 hover:border-red-500 transition-colors"
+          className="flex items-center justify-center w-24 h-24 bg-transparent border-2 border-white text-white font-bold rounded-full relative z-10 hover:border-red-500 transition-colors"
           animate={{
+            scale: [1, 1.1, 1],
             boxShadow: isHovered
               ? "0 0 20px rgba(255, 0, 0, 0.5)"
               : "0 0 0px rgba(255, 0, 0, 0)",
+          }}
+          transition={{
+            scale: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+            boxShadow: {
+              duration: 0.3,
+            },
           }}
         >
           {label}
